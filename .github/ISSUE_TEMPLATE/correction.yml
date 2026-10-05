@@ -1,0 +1,29 @@
+name: Rettelse / Correction
+description: Noe i listen er feil, utdatert eller stengt. / Something in the list is wrong, outdated or closed.
+title: "Rettelse / Correction: "
+labels: [correction]
+body:
+  - type: input
+    id: company
+    attributes:
+      label: Firma / Company
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: Hva er feil? / What's wrong?
+      options:
+        - Programmet er stengt / The program is closed
+        - Død eller feil lenke / Dead or wrong link
+        - Feil type, dusør eller plattform / Wrong type, reward or platform
+        - Annet / Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Detaljer og kilde / Details and source
+      description: Hva bør det stå i stedet, og hvordan vet du det? / What should it say instead, and how do you know?
+    validations:
+      required: true

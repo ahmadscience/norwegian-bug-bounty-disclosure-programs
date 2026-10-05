@@ -33,9 +33,9 @@ Er et program stengt? Sett `status: closed` i stedet for å fjerne oppføringen.
 
 Is a program closed? Set `status: closed` instead of removing the entry.
 
-Har du ikke lyst til å lage en pull request? [Opprett et issue](../../issues/new) med lenke til programmet, så tar noen seg av resten.
+Har du ikke lyst til å lage en pull request? [Opprett et issue](../../issues/new/choose) med lenke til programmet, så tar noen seg av resten.
 
-Don't want to open a pull request? [Open an issue](../../issues/new) with a link to the program, and someone will take it from there.
+Don't want to open a pull request? [Open an issue](../../issues/new/choose) with a link to the program, and someone will take it from there.
 
 ## Hva hører hjemme i listen? / What belongs in the list?
 
@@ -60,3 +60,13 @@ python3 scripts/render.py
 Kjør `python3 scripts/render.py --check` for å se om `README.md` er i sync med `programs.yaml` uten å skrive noe.
 
 Run `python3 scripts/render.py --check` to see whether `README.md` is in sync with `programs.yaml` without writing anything.
+
+`python3 scripts/check_links.py` sjekker at alle lenker i `programs.yaml` fungerer. Den kjører også automatisk hver uke.
+
+`python3 scripts/check_links.py` checks that every link in `programs.yaml` works. It also runs automatically every week.
+
+## Lisens / License
+
+Ved å bidra godtar du at bidraget ditt publiseres under [CC0 1.0](LICENSE) (fritt for alle formål).
+
+By contributing you agree that your contribution is published under [CC0 1.0](LICENSE) (free for any purpose).

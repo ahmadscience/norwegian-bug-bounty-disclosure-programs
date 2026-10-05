@@ -233,7 +233,11 @@ def render(programs):
     active = [p for p in programs if p.get("status", "active") != "closed"]
     public_money = [p for p in active if SECTIONS[0][2](p) and "money" in p["rewards"]]
     undisclosed = [p for p in active if p["visibility"] == "undisclosed"]
-    stats = (f"**{len(active)} aktive program / active programs · "
+    named = len(active) - len(undisclosed)
+    stats = f"**{named} aktive program / active programs"
+    if undisclosed:
+        stats += f" (+ {len(undisclosed)} uten navn / unnamed)"
+    stats += (" · "
              f"{len(public_money)} offentlige bug bounty-program med pengedusør / "
              f"public bug bounty programs with a cash reward")
     updated = last_updated()

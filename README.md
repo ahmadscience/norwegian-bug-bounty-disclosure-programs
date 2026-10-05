@@ -13,7 +13,7 @@ Know of a program that's missing? See [Contributing](#bidra--contributing) below
 > ⚠️ **A `security.txt` is not an invitation to test.** It is a contact channel for reporting vulnerabilities you found through normal use, not permission to scan, attack, or actively probe for weaknesses. Most `security.txt` entries below (the "security.txt / contact only" category) have **no** formal policy, scope, or safe harbor language. Without a published bug bounty or VDP agreement that explicitly authorizes active testing, unauthorized testing can be illegal and you may face liability even if you report the finding in good faith.
 
 <!-- programs:start -->
-**85 aktive program / active programs · 9 offentlige bug bounty-program med pengedusør / public bug bounty programs with a cash reward · sist oppdatert / last updated 2026-10-05**
+**82 aktive program / active programs (+ 3 uten navn / unnamed) · 9 offentlige bug bounty-program med pengedusør / public bug bounty programs with a cash reward · sist oppdatert / last updated 2026-10-05**
 
 ### 💰 Offentlige bug bounty-program / Public bug bounty programs
 
@@ -164,28 +164,13 @@ Programs that publicly credit researchers (🏆 in the tables), useful if you wa
 
 ## Bidra / Contributing
 
-Denne listen driftes av fellesskapet. Slik hjelper du til:
+Listen driftes av fellesskapet. Rediger [`programs.yaml`](programs.yaml) og send en pull request, eller [opprett et issue](../../issues/new/choose) med en lenke til programmet. Se [CONTRIBUTING.md](CONTRIBUTING.md) for felt, regler for hva som hører hjemme i listen, og hvordan du forhåndsviser lokalt.
 
-This list is community-maintained. Here's how to help:
+This list is community-maintained. Edit [`programs.yaml`](programs.yaml) and send a pull request, or [open an issue](../../issues/new/choose) with a link to the program. See [CONTRIBUTING.md](CONTRIBUTING.md) for the fields, what belongs in the list, and how to preview locally.
 
-1. Rediger [`programs.yaml`](programs.yaml). **Ikke** rediger tabellene i `README.md` direkte - de genereres automatisk når endringen havner på `main`.
-   Edit [`programs.yaml`](programs.yaml). **Do not** edit the tables in `README.md` directly - they are generated automatically once the change lands on `main`.
-2. Send en pull request. Feltbeskrivelser står øverst i `programs.yaml`, og en fyldigere guide finnes i [CONTRIBUTING.md](CONTRIBUTING.md).
-   Send a pull request. Field descriptions are at the top of `programs.yaml`, and a fuller guide is in [CONTRIBUTING.md](CONTRIBUTING.md).
-3. En sjekk kjører automatisk på pull requesten og sier fra hvis noe mangler eller har feil verdi.
-   A check runs automatically on the pull request and flags anything missing or invalid.
+Kjenner du en norsk virksomhet som burde hatt et program, men ikke har det? Ikke legg dem til her - oppfordre dem heller til å publisere en `security.txt` etter [RFC 9116](https://datatracker.ietf.org/doc/html/rfc9116).
 
-Har du ikke lyst til å lage en pull request selv? [Opprett et issue](../../issues/new) med en lenke til programmet, så tar noen seg av resten.
-
-Don't want to open a pull request yourself? [Open an issue](../../issues/new) with a link to the program, and someone will take it from there.
-
-Hva hører hjemme i listen: programmer hos norske selskap eller norske datterselskap/merkevarer av utenlandske selskap; både betalte bug bounty-program og gratis responsible/vulnerability disclosure-program; private program bare når eksistensen er offentlig kjent og du kan oppgi en kilde (er programmet hemmelig, utelat `name` og sett `visibility: undisclosed`); og virksomheter som i det minste svarer på rapporter via en publisert `security.txt`.
-
-What belongs in the list: programs run by Norwegian companies, or by Norwegian subsidiaries/brands of foreign companies; both paid bug bounty programs and free responsible/vulnerability disclosure programs; private programs only when their existence is publicly known and you can cite a source (if the program is secret, omit `name` and set `visibility: undisclosed`); and organizations that at least respond to reports via a published `security.txt`.
-
-Kjenner du en norsk virksomhet som burde hatt et program, men ikke har det? Ikke legg dem til her - oppfordre dem heller til å publisere en `security.txt` etter [RFC 9116](https://datatracker.ietf.org/doc/html/rfc9116), det er det enkleste stedet å starte.
-
-Know a Norwegian organization that should have a program but doesn't? Don't add them here - encourage them to publish a `security.txt` per [RFC 9116](https://datatracker.ietf.org/doc/html/rfc9116) instead, it's the easiest place to start.
+Know a Norwegian organization that should have a program but doesn't? Don't add them here - encourage them to publish a `security.txt` per [RFC 9116](https://datatracker.ietf.org/doc/html/rfc9116) instead.
 
 ## Ressurser / Resources
 
@@ -198,4 +183,4 @@ Know a Norwegian organization that should have a program but doesn't? Don't add 
 
 ---
 
-*Se [`programs.yaml`](programs.yaml) for kilde-dataen og [CONTRIBUTING.md](CONTRIBUTING.md) for en fullstendig bidragsguide. / See [`programs.yaml`](programs.yaml) for the source data and [CONTRIBUTING.md](CONTRIBUTING.md) for a full contribution guide.*
+*Data: [`programs.yaml`](programs.yaml) · Bidragsguide / Contributing: [CONTRIBUTING.md](CONTRIBUTING.md) · Lisens / License: [CC0 1.0](LICENSE)*
