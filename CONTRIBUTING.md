@@ -67,6 +67,6 @@ Run `python3 scripts/render.py --check` to see whether `README.md` is in sync wi
 
 ## Lisens / License
 
-Ved å bidra godtar du at bidraget ditt publiseres under [CC0 1.0](LICENSE) (fritt for alle formål).
+Ved å bidra godtar du at bidraget ditt publiseres under [CC BY 4.0](LICENSE). Alle som gjenbruker listen må kreditere kilden.
 
-By contributing you agree that your contribution is published under [CC0 1.0](LICENSE) (free for any purpose).
+By contributing you agree that your contribution is published under [CC BY 4.0](LICENSE). Anyone reusing the list must credit the source.
