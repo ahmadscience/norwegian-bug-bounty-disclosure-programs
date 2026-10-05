@@ -6,8 +6,8 @@ Know of a Norwegian bug bounty, VDP or responsible disclosure program that's mis
 
 ## Slik gjør du det / How to do it
 
-1. Rediger [`programs.yaml`](programs.yaml). **Ikke** rediger tabellene i `README.md` direkte, de genereres automatisk når endringen er inne på `main`.
-   Edit [`programs.yaml`](programs.yaml). **Do not** edit the tables in `README.md` directly, they are generated automatically once the change lands on `main`.
+1. Rediger [`programs.yaml`](programs.yaml). **Ikke** rediger tabellene eller Hall of Fame-listen i `README.md` direkte, de genereres automatisk når endringen er inne på `main`.
+   Edit [`programs.yaml`](programs.yaml). **Do not** edit the tables or the Hall of Fame list in `README.md` directly, they are generated automatically once the change lands on `main`.
 2. Send en pull request. Beskrivelsen av feltene står øverst i `programs.yaml`.
    Send a pull request. Field descriptions are at the top of `programs.yaml`.
 3. En sjekk kjører på pull requesten og sier fra hvis noe mangler eller har feil verdi.

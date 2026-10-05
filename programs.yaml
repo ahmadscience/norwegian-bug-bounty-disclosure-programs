@@ -52,7 +52,7 @@
   security_txt: https://firi.com/.well-known/security.txt
   launched: 2024-10
   source: https://firi.com/.well-known/security.txt
-  source_name: Firi
+  source_name: security.txt
 
 - name: Horde
   url: https://horde.no
@@ -80,6 +80,7 @@
   security_txt: https://kahoot.com/.well-known/security.txt
   source: https://intigriti.com/companies
   source_name: Intigriti
+  comment: Kilden er Intigritis generelle kundeliste, ikke en programside. / Source is Intigriti's general customer list, not a program page.
 
 - name: Kahoot
   url: https://kahoot.com
@@ -109,6 +110,8 @@
   type: bug-bounty
   program_url: https://www.morgenbladet.no/kontakt-oss
   rewards: [money]
+  status: unknown
+  comment: Fant ingen egen policyside, lenken går til kontaktsiden. Bekreft før du tester. / No dedicated policy page found, link goes to the contact page. Verify before testing.
 
 - name: NBX
   url: https://nbx.com
@@ -172,7 +175,7 @@
   security_txt: https://www.signicat.com/.well-known/security.txt
 
 - name: Sparebank 1
-  url: https://sparebank1.no/
+  url: https://www.sparebank1.no
   platform: intigriti
   visibility: private-known
   type: bug-bounty
@@ -229,21 +232,14 @@
 - name: Visma
   url: https://visma.no
   platform: intigriti
-  visibility: private-known
-  type: bug-bounty
-  rewards: [money]
-  source: https://web.archive.org/web/20221203065247/https://www.visma.com/trust-centre/security/vasp-vcdm/operations/bug-bounty-and-responsible-disclosure/
-  source_name: Visma via Wayback Machine
-
-- name: Visma
-  url: https://visma.no
-  platform: intigriti
   visibility: public
   type: bug-bounty
   program_url: https://app.intigriti.com/researcher/programs/visma/visma
   rewards: [money]
-  source: https://www.visma.com/trust-centre/responsible-disclosure
-  source_name: Visma
+  launched: 2021-01
+  source: https://www.intigriti.com/blog/customer-stories/vismas-bug-bounty-program-manager-speaks-to-intigriti-about-the-practice-of-running-a-successful-program
+  source_name: Intigriti
+  comment: Startet som privat program, offentlig siden januar 2021. / Started as a private program, public since January 2021.
 
 - name: Visma
   url: https://visma.no
@@ -411,13 +407,13 @@
   comment: Belønningsvilkår ikke offentlige. / Reward terms not public.
 
 - name: SAS
-  url: https://www.sas.com
+  url: https://www.flysas.com
   platform: hackerone
   visibility: public
   type: vdp
   program_url: https://hackerone.com/sas_legacy
   rewards: [hall-of-fame]
-  comment: Den norske stat er deleier. / The Norwegian state is a part-owner.
+  comment: Scandinavian Airlines, skandinavisk flyselskap med stor virksomhet i Norge. / Scandinavian Airlines, a Scandinavian airline with major operations in Norway.
 
 - name: Telenor
   url: https://www.telenor.com
@@ -543,7 +539,6 @@
   platform: none
   visibility: public
   type: rdp
-  program_url: https://www.bergen.kommune.no/.well-known/security.txt
   rewards: []
   security_txt: https://www.bergen.kommune.no/.well-known/security.txt
   comment: 'Kontakt: itsikkerhet@bergen.kommune.no. Ber om varsel før aktiv testing. / Contact: itsikkerhet@bergen.kommune.no. Asks for advance notice before active testing.'
@@ -692,7 +687,7 @@
   url: https://www.dagbladet.no
   platform: hackerone
   visibility: public
-  type: contact-only
+  type: vdp
   program_url: https://hackerone.com/dagbladet
   rewards: []
   comment: Generisk HackerOne-oppføring, scope og vilkår er uklare. / Generic HackerOne listing, scope and terms are unclear.
@@ -701,10 +696,10 @@
   url: https://www.dn.no
   platform: none
   visibility: public
-  type: rdp
+  type: bug-bounty
   program_url: https://www.dn.no/kundeservice/faq/vilkar-og-personvern/bug-bounty
   rewards: [money]
-  comment: Dagens Næringsliv. / Dagens Næringsliv, a Norwegian business newspaper.
+  comment: Dagens Næringsliv. Dusør etter alvorlighetsgrad, rapporter til sikkerhet@dn.no. / Dagens Næringsliv. Reward based on severity, report to sikkerhet@dn.no.
 
 - name: Dune Analytics
   url: https://dune.com
@@ -740,7 +735,7 @@
   unit: Nettavisen Sport
   platform: hackerone
   visibility: public
-  type: contact-only
+  type: vdp
   program_url: https://hackerone.com/nettavisen_sport
   rewards: []
   comment: Dekker trolig kun Sport-seksjonen. / Likely covers only the Sport section.
