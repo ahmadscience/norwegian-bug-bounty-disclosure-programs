@@ -76,11 +76,13 @@ def discover(programs):
 
 def main():
     programs = yaml.safe_load((ROOT / "programs.yaml").read_text(encoding="utf-8"))
-    owners = {}
+    owners, active = {}, set()
     for p in programs:
         for key in URL_FIELDS:
             if key in p:
                 owners.setdefault(p[key], []).append(f"{p.get('name', '(undisclosed)')}.{key}")
+                if p.get("status", "active") == "active":
+                    active.add(p[key])
     urls = sorted(owners)
     with ThreadPoolExecutor(max_workers=16) as pool:
         results = dict(zip(urls, pool.map(check, urls)))
@@ -100,7 +102,8 @@ def main():
             f.write(summary + "\n")
     if "--discover" in sys.argv:
         discover(programs)
-    if "--strict" in sys.argv and counts["dead"]:
+    # Entries already marked unknown/closed are listed but don't fail the run.
+    if "--strict" in sys.argv and any(results[u][0] == "dead" for u in active):
         sys.exit(1)
 
 
