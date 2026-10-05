@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Validate programs.yaml and render the bilingual (NO/EN) table into README.md
-between markers.
+"""Validate programs.yaml and render the bilingual (NO/EN) tables and the Hall of
+Fame list into README.md between markers.
 
 Usage: render.py [--validate | --check]
 """
@@ -17,6 +17,8 @@ DATA = ROOT / "programs.yaml"
 README = ROOT / "README.md"
 START = "<!-- programs:start -->"
 END = "<!-- programs:end -->"
+HOF_START = "<!-- halloffame:start -->"
+HOF_END = "<!-- halloffame:end -->"
 
 PLATFORMS = {
     "hackerone": ("HackerOne", "https://hackerone.com"),
@@ -59,6 +61,7 @@ TEXT_FIELDS = ("name", "unit", "source_name", "comment")
 URL_FIELDS = ("url", "unit_url", "program_url", "source", "security_txt")
 UNSAFE_TEXT_RE = re.compile(r"[|\[\]<>()`\\\n\r]")
 URL_RE = re.compile(r"^https://[^\s|<>()\[\]`\\]+$")
+UPDATED_RE = re.compile(r" · sist oppdatert / last updated \d{4}-\d{2}-\d{2}")
 
 
 def fail(index, msg):
@@ -100,6 +103,20 @@ def validate(programs):
             fail(i, f"bad 'launched' value '{p['launched']}' (use YYYY, YYYY-MM or '<= YYYY')")
         if p.get("status", "active") not in STATUS:
             fail(i, f"unknown status '{p['status']}'")
+        if "money" in p["rewards"] and p["type"] != "bug-bounty":
+            fail(i, "'money' reward requires type 'bug-bounty'")
+        if p["type"] == "contact-only" and p["platform"] != "none":
+            fail(i, "contact-only entries must have platform 'none' (use vdp/rdp for platform programs)")
+        if p["visibility"] == "private-known" and "source" not in p and "program_url" not in p:
+            fail(i, "private-known programs need a 'source' (or 'program_url') documenting them")
+    seen = {}
+    for i, p in enumerate(programs):
+        if p["visibility"] == "undisclosed":
+            continue
+        key = (p["name"].lower(), p.get("unit", "").lower(), p["platform"], p["type"], p["visibility"])
+        if key in seen:
+            fail(i, f"duplicate of entry {seen[key] + 1}")
+        seen[key] = i
 
 
 def link(text, url):
@@ -216,7 +233,11 @@ def render(programs):
     active = [p for p in programs if p.get("status", "active") != "closed"]
     public_money = [p for p in active if SECTIONS[0][2](p) and "money" in p["rewards"]]
     undisclosed = [p for p in active if p["visibility"] == "undisclosed"]
-    stats = (f"**{len(active)} aktive program / active programs · "
+    named = len(active) - len(undisclosed)
+    stats = f"**{named} aktive program / active programs"
+    if undisclosed:
+        stats += f" (+ {len(undisclosed)} uten navn / unnamed)"
+    stats += (" · "
              f"{len(public_money)} offentlige bug bounty-program med pengedusør / "
              f"public bug bounty programs with a cash reward")
     updated = last_updated()
@@ -240,6 +261,27 @@ def render(programs):
     return "\n\n".join(parts)
 
 
+def hall_of_fame(programs):
+    """Bullet list of active programs that credit researchers publicly."""
+    rows = sorted(
+        (p for p in programs if "hall-of-fame" in p["rewards"] and p.get("status", "active") != "closed"),
+        key=sort_key,
+    )
+    lines = []
+    for p in rows:
+        name = p["name"] + (f" / {p['unit']}" if "unit" in p else "")
+        lines.append(f"- {link(name, p.get('program_url') or p.get('security_txt') or p['url'])}")
+    return "\n".join(lines)
+
+
+def replace_between(text, start, end, body):
+    if start not in text or end not in text:
+        sys.exit(f"README.md is missing {start} / {end} markers")
+    before, rest = text.split(start, 1)
+    _, after = rest.split(end, 1)
+    return f"{before}{start}\n{body}\n{end}{after}"
+
+
 def main():
     programs = yaml.safe_load(DATA.read_text(encoding="utf-8"))
     validate(programs)
@@ -247,13 +289,11 @@ def main():
         print(f"programs.yaml is valid ({len(programs)} programs)")
         return
     readme = README.read_text(encoding="utf-8")
-    if START not in readme or END not in readme:
-        sys.exit(f"README.md is missing {START} / {END} markers")
-    before, rest = readme.split(START, 1)
-    _, after = rest.split(END, 1)
-    updated = f"{before}{START}\n{render(programs)}\n{END}{after}"
+    updated = replace_between(readme, START, END, render(programs))
+    updated = replace_between(updated, HOF_START, HOF_END, hall_of_fame(programs))
     if "--check" in sys.argv:
-        if updated != readme:
+        # The "last updated" date depends on commit timing, so it is not compared.
+        if UPDATED_RE.sub("", updated) != UPDATED_RE.sub("", readme):
             sys.exit("README.md is out of date; run scripts/render.py")
         print("README.md is up to date")
         return

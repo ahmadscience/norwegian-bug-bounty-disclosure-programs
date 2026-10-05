@@ -1,0 +1,49 @@
+name: Nytt program / New program
+description: Foreslå et norsk bug bounty-, VDP- eller disclosure-program som mangler. / Suggest a missing Norwegian bug bounty, VDP or disclosure program.
+title: "Nytt program / New program: "
+labels: [new-program]
+body:
+  - type: input
+    id: company
+    attributes:
+      label: Firma / Company
+      placeholder: Oda
+    validations:
+      required: true
+  - type: input
+    id: program_url
+    attributes:
+      label: Lenke til programmet eller security.txt / Link to the program or security.txt
+      placeholder: https://example.no/.well-known/security.txt
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Bug bounty (dusør / reward)
+        - VDP / responsible disclosure
+        - Bare security.txt eller kontakt / security.txt or contact only
+        - Vet ikke / Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: visibility
+    attributes:
+      label: Synlighet / Visibility
+      options:
+        - Offentlig / Public
+        - Privat, men offentlig kjent / Private, but publicly known
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Kilde (påkrevd for private program) / Source (required for private programs)
+      placeholder: https://...
+  - type: textarea
+    id: notes
+    attributes:
+      label: Annet / Anything else
+      description: Plattform, dusør, lanseringsdato, forbehold. / Platform, rewards, launch date, caveats.

@@ -52,7 +52,7 @@
   security_txt: https://firi.com/.well-known/security.txt
   launched: 2024-10
   source: https://firi.com/.well-known/security.txt
-  source_name: Firi
+  source_name: security.txt
 
 - name: Horde
   url: https://horde.no
@@ -80,6 +80,7 @@
   security_txt: https://kahoot.com/.well-known/security.txt
   source: https://intigriti.com/companies
   source_name: Intigriti
+  comment: Kilden er Intigritis generelle kundeliste, ikke en programside. / Source is Intigriti's general customer list, not a program page.
 
 - name: Kahoot
   url: https://kahoot.com
@@ -109,6 +110,8 @@
   type: bug-bounty
   program_url: https://www.morgenbladet.no/kontakt-oss
   rewards: [money]
+  status: unknown
+  comment: Fant ingen egen policyside, lenken går til kontaktsiden. Bekreft før du tester. / No dedicated policy page found, link goes to the contact page. Verify before testing.
 
 - name: NBX
   url: https://nbx.com
@@ -172,7 +175,7 @@
   security_txt: https://www.signicat.com/.well-known/security.txt
 
 - name: Sparebank 1
-  url: https://sparebank1.no/
+  url: https://www.sparebank1.no
   platform: intigriti
   visibility: private-known
   type: bug-bounty
@@ -229,21 +232,14 @@
 - name: Visma
   url: https://visma.no
   platform: intigriti
-  visibility: private-known
-  type: bug-bounty
-  rewards: [money]
-  source: https://web.archive.org/web/20221203065247/https://www.visma.com/trust-centre/security/vasp-vcdm/operations/bug-bounty-and-responsible-disclosure/
-  source_name: Visma via Wayback Machine
-
-- name: Visma
-  url: https://visma.no
-  platform: intigriti
   visibility: public
   type: bug-bounty
   program_url: https://app.intigriti.com/researcher/programs/visma/visma
   rewards: [money]
-  source: https://www.visma.com/trust-centre/responsible-disclosure
-  source_name: Visma
+  launched: 2021-01
+  source: https://www.intigriti.com/blog/customer-stories/vismas-bug-bounty-program-manager-speaks-to-intigriti-about-the-practice-of-running-a-successful-program
+  source_name: Intigriti
+  comment: Startet som privat program, offentlig siden januar 2021. / Started as a private program, public since January 2021.
 
 - name: Visma
   url: https://visma.no
@@ -280,6 +276,7 @@
   type: rdp
   program_url: https://www.digdir.no/digdir/responsible-disclosure-policy/6386
   rewards: [hall-of-fame]
+  security_txt: https://www.digdir.no/.well-known/security.txt
 
 - name: Equinor
   url: https://www.equinor.com
@@ -291,7 +288,7 @@
   security_txt: https://www.equinor.com/.well-known/security.txt
 
 - name: Euronext Securities Oslo
-  url: https://www.euronextvps.no
+  url: https://www.euronext.com
   platform: none
   visibility: public
   type: rdp
@@ -306,6 +303,7 @@
   type: vdp
   program_url: https://hackerone.com/gjensidige
   rewards: [hall-of-fame]
+  security_txt: https://www.gjensidige.no/.well-known/security.txt
 
 - name: Kongsberg Gruppen
   url: https://www.kongsberg.com
@@ -358,6 +356,7 @@
   type: bug-bounty
   program_url: https://hackerone.com/northerntechhq
   rewards: [money]
+  security_txt: https://northern.tech/security.txt
   launched: 2021
   source: https://northern.tech/blog/
   source_name: Northern.tech
@@ -369,6 +368,7 @@
   type: rdp
   program_url: https://www.nbim.no/en/responsible-disclosure-policy/
   rewards: [hall-of-fame]
+  security_txt: https://www.nbim.no/.well-known/security.txt
   comment: Forvalter Statens pensjonsfond utland, kjent som Oljefondet. / Manages the Government Pension Fund Global, known as the Oil Fund.
 
 - name: Infront
@@ -379,6 +379,8 @@
   type: rdp
   program_url: https://oslomarketsolutions.no/en/responsibledisclosure/
   rewards: []
+  status: unknown
+  comment: Nettstedet har utløpt TLS-sertifikat per oktober 2026. / The site has an expired TLS certificate as of October 2026.
 
 - name: Opera Software
   url: https://www.opera.com
@@ -387,6 +389,7 @@
   type: bug-bounty
   program_url: https://bugcrowd.com/opera
   rewards: [money]
+  security_txt: https://opera.com/.well-known/security.txt
   launched: "<= 2018"
   source: https://security.opera.com/en/bug-bounty/
   source_name: Opera
@@ -400,6 +403,7 @@
   type: rdp
   program_url: https://vdp.postnord.com/
   rewards: [hall-of-fame]
+  security_txt: https://www.postnord.com/.well-known/security.txt
 
 - name: Promon
   url: https://promon.io
@@ -408,16 +412,17 @@
   type: bug-bounty
   program_url: https://trust.promon.io/
   rewards: [money, hall-of-fame]
+  security_txt: https://promon.io/.well-known/security.txt
   comment: Belønningsvilkår ikke offentlige. / Reward terms not public.
 
 - name: SAS
-  url: https://www.sas.com
+  url: https://www.flysas.com
   platform: hackerone
   visibility: public
   type: vdp
   program_url: https://hackerone.com/sas_legacy
   rewards: [hall-of-fame]
-  comment: Den norske stat er deleier. / The Norwegian state is a part-owner.
+  comment: Scandinavian Airlines, skandinavisk flyselskap med stor virksomhet i Norge. / Scandinavian Airlines, a Scandinavian airline with major operations in Norway.
 
 - name: Telenor
   url: https://www.telenor.com
@@ -443,6 +448,7 @@
   type: bug-bounty
   program_url: https://bugcrowd.com/engagements/tidal-bugbounty
   rewards: [money]
+  security_txt: https://tidal.com/.well-known/security.txt
 
 - name: TV 2
   url: https://www.tv2.no
@@ -451,6 +457,7 @@
   type: rdp
   program_url: https://info.tv2.no/info/artikkel/responsible-disclosure-policy
   rewards: [hall-of-fame]
+  security_txt: https://www.tv2.no/.well-known/security.txt
 
 - name: Vy
   url: https://www.vy.no
@@ -459,6 +466,7 @@
   type: rdp
   program_url: https://www.vy.no/en/conditions-and-privacy/vulnerability-disclosure-policy
   rewards: []
+  security_txt: https://www.vy.no/.well-known/security.txt
   comment: Tidligere NSB. / Formerly NSB.
 
 - name: Yara
@@ -468,6 +476,8 @@
   type: rdp
   program_url: https://vdp.yara.com/
   rewards: [hall-of-fame]
+  status: unknown
+  comment: VDP-siden svarer med feil TLS-sertifikat per oktober 2026. / The VDP site serves a mismatched TLS certificate as of October 2026.
 
 - name: Bane NOR
   url: https://www.banenor.no
@@ -526,6 +536,7 @@
   visibility: public
   type: contact-only
   rewards: []
+  security_txt: https://www.statkraft.com/.well-known/security.txt
   program_url: https://www.statkraft.com/about-statkraft/irt/
   comment: 'IRT-kontakt: csirt@statkraft.com, ingen egen policyside. / IRT contact: csirt@statkraft.com, no dedicated policy page.'
 
@@ -543,7 +554,6 @@
   platform: none
   visibility: public
   type: rdp
-  program_url: https://www.bergen.kommune.no/.well-known/security.txt
   rewards: []
   security_txt: https://www.bergen.kommune.no/.well-known/security.txt
   comment: 'Kontakt: itsikkerhet@bergen.kommune.no. Ber om varsel før aktiv testing. / Contact: itsikkerhet@bergen.kommune.no. Asks for advance notice before active testing.'
@@ -590,6 +600,7 @@
   type: rdp
   program_url: https://www.justiscert.no/rapportering-av-sarbarheter
   rewards: []
+  security_txt: https://www.justiscert.no/.well-known/security.txt
   comment: CERT for justissektoren, bl.a. politiet og domstolene. / CERT for the justice sector, incl. police and courts.
 
 - name: Klarna
@@ -608,6 +619,7 @@
   type: rdp
   program_url: https://www.klp.no/om-klp/personvern/slik-sikrer-vi-din-informasjon
   rewards: []
+  security_txt: https://www.klp.no/.well-known/security.txt
   comment: 'Kontakt: sikkerhet@klp.no, PGP foretrekkes. / Contact: sikkerhet@klp.no, PGP preferred.'
 
 - name: Nordnet
@@ -617,6 +629,7 @@
   type: rdp
   program_url: https://www.nordnet.se/security-disclosure
   rewards: []
+  security_txt: https://www.nordnet.no/.well-known/security.txt
   comment: Nordisk plattform, ikke bekreftet Norge-spesifikk side. / Nordic platform, no Norway-specific page confirmed.
 
 - name: Oslo kommune
@@ -664,10 +677,10 @@
   platform: none
   visibility: public
   type: rdp
-  program_url: https://sykehuspartner.no/sider/Responsible-disclosure-policy.aspx
   rewards: []
   security_txt: https://www.sykehuspartner.no/.well-known/security.txt
-  comment: Felles helse-IT-drift for Helse Sør-Øst. / Shared health-IT operations for Helse Sør-Øst.
+  status: unknown
+  comment: Felles helse-IT-drift for Helse Sør-Øst. Policysiden er borte, security.txt virker fortsatt. / Shared health-IT operations for Helse Sør-Øst. The policy page is gone, security.txt still works.
 
 - name: Tryg Forsikring
   url: https://www.tryg.no
@@ -686,13 +699,14 @@
   type: rdp
   program_url: https://www.uio.no/english/services/it/security/cert/vulnerability-disclosure-policy.html
   rewards: []
+  security_txt: https://www.uio.no/.well-known/security.txt
   comment: Drives av UiO-CERT. / Run by UiO-CERT.
 
 - name: Dagbladet
   url: https://www.dagbladet.no
   platform: hackerone
   visibility: public
-  type: contact-only
+  type: vdp
   program_url: https://hackerone.com/dagbladet
   rewards: []
   comment: Generisk HackerOne-oppføring, scope og vilkår er uklare. / Generic HackerOne listing, scope and terms are unclear.
@@ -701,10 +715,10 @@
   url: https://www.dn.no
   platform: none
   visibility: public
-  type: rdp
+  type: bug-bounty
   program_url: https://www.dn.no/kundeservice/faq/vilkar-og-personvern/bug-bounty
   rewards: [money]
-  comment: Dagens Næringsliv. / Dagens Næringsliv, a Norwegian business newspaper.
+  comment: Dagens Næringsliv. Dusør etter alvorlighetsgrad, rapporter til sikkerhet@dn.no. / Dagens Næringsliv. Reward based on severity, report to sikkerhet@dn.no.
 
 - name: Dune Analytics
   url: https://dune.com
@@ -740,7 +754,7 @@
   unit: Nettavisen Sport
   platform: hackerone
   visibility: public
-  type: contact-only
+  type: vdp
   program_url: https://hackerone.com/nettavisen_sport
   rewards: []
   comment: Dekker trolig kun Sport-seksjonen. / Likely covers only the Sport section.
@@ -761,6 +775,7 @@
   type: rdp
   program_url: https://support.remarkable.com/hc/en-us/articles/5068888862621-Vulnerability-Disclosure-Policy
   rewards: [hall-of-fame]
+  security_txt: https://remarkable.com/.well-known/security.txt
   comment: Oslo-basert nettbrettprodusent. / Oslo-based tablet maker.
 
 - platform: intigriti
@@ -780,3 +795,40 @@
   type: bug-bounty
   rewards: [money]
   launched: 2024-01
+
+- name: AutoStore
+  url: https://www.autostoresystem.com
+  platform: none
+  visibility: public
+  type: rdp
+  program_url: https://www.autostoresystem.com/legal/vulnerability-disclosure-policy-responsible-research-guidelines
+  rewards: [hall-of-fame]
+  comment: Ingen dusør. Produktene styrer fysiske roboter, test forsiktig. / No bounty. Products control physical robots, test with care.
+
+- name: Kartverket
+  url: https://www.kartverket.no
+  platform: none
+  visibility: public
+  type: rdp
+  program_url: https://vdp.kartverket.no/responsible-disclosure-policy.txt
+  rewards: [hall-of-fame]
+  comment: Dekker alle underdomener av kartverket.no og geonorge.no. / Covers all subdomains of kartverket.no and geonorge.no.
+
+- name: Nordic Semiconductor
+  url: https://www.nordicsemi.com
+  platform: none
+  visibility: public
+  type: vdp
+  program_url: https://www.nordicsemi.com/Products/Technologies/Security/Vulnerability-Disclosure
+  rewards: []
+
+- name: Nordic Semiconductor
+  url: https://www.nordicsemi.com
+  platform: yeswehack
+  visibility: private-known
+  type: bug-bounty
+  rewards: [money]
+  launched: 2021-01
+  source: https://www.nordicsemi.com/Products/Technologies/Security/Vulnerability-Disclosure
+  source_name: Nordic Semiconductor
+  comment: Startet på HackerOne i 2021, nå på YesWeHack. Kontakt YesWeHack for invitasjon. / Started on HackerOne in 2021, now on YesWeHack. Contact YesWeHack for an invite.
