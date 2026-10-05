@@ -21,4 +21,4 @@ jobs:
         with:
           python-version: "3.x"
       - run: pip install pyyaml
-      - run: python3 scripts/check_links.py --strict
+      - run: python3 scripts/check_links.py --strict --discover

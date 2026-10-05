@@ -5,7 +5,9 @@ A link counts as dead on 404/410, or when the host doesn't resolve or refuses
 the connection. 401/403/429/5xx are reported as "blocked" only, since many
 sites reject automated requests from CI runners.
 
-Usage: check_links.py [--strict]   (--strict exits non-zero on dead links)
+Usage: check_links.py [--strict] [--discover]
+  --strict    exit non-zero on dead links
+  --discover  also look for /.well-known/security.txt on entries without one
 """
 
 import os
@@ -44,6 +46,34 @@ def check(url):
     return "dead", "unreachable"
 
 
+def find_security_txt(url):
+    """Return the security.txt URL for a site if it serves a valid-looking one."""
+    base = "/".join(url.split("/")[:3])
+    candidate = f"{base}/.well-known/security.txt"
+    req = urllib.request.Request(candidate, headers={"User-Agent": UA})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            body = resp.read(65536).decode("utf-8", "replace")
+            final = resp.geturl()
+    except (urllib.error.URLError, socket.timeout, ConnectionError, OSError, ValueError):
+        return None
+    if "contact:" not in body.lower() or "<html" in body.lower():
+        return None
+    return final if final.startswith("https://") else candidate
+
+
+def discover(programs):
+    todo = [p for p in programs if "url" in p and "security_txt" not in p]
+    with ThreadPoolExecutor(max_workers=16) as pool:
+        found = list(pool.map(lambda p: find_security_txt(p["url"]), todo))
+    lines = [f"- {p['name']}{' / ' + p['unit'] if 'unit' in p else ''}: {u}" for p, u in zip(todo, found) if u]
+    out = f"\nsecurity.txt found for {len(lines)} of {len(todo)} entries without one:\n" + "\n".join(lines)
+    print(out)
+    if os.environ.get("GITHUB_STEP_SUMMARY"):
+        with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:
+            f.write(out + "\n")
+
+
 def main():
     programs = yaml.safe_load((ROOT / "programs.yaml").read_text(encoding="utf-8"))
     owners = {}
@@ -68,6 +98,8 @@ def main():
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:
             f.write(summary + "\n")
+    if "--discover" in sys.argv:
+        discover(programs)
     if "--strict" in sys.argv and counts["dead"]:
         sys.exit(1)
 

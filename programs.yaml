@@ -287,7 +287,7 @@
   security_txt: https://www.equinor.com/.well-known/security.txt
 
 - name: Euronext Securities Oslo
-  url: https://www.euronextvps.no
+  url: https://www.euronext.com
   platform: none
   visibility: public
   type: rdp
@@ -375,6 +375,8 @@
   type: rdp
   program_url: https://oslomarketsolutions.no/en/responsibledisclosure/
   rewards: []
+  status: unknown
+  comment: Nettstedet har utløpt TLS-sertifikat per oktober 2026. / The site has an expired TLS certificate as of October 2026.
 
 - name: Opera Software
   url: https://www.opera.com
@@ -464,6 +466,8 @@
   type: rdp
   program_url: https://vdp.yara.com/
   rewards: [hall-of-fame]
+  status: unknown
+  comment: VDP-siden svarer med feil TLS-sertifikat per oktober 2026. / The VDP site serves a mismatched TLS certificate as of October 2026.
 
 - name: Bane NOR
   url: https://www.banenor.no
@@ -659,10 +663,10 @@
   platform: none
   visibility: public
   type: rdp
-  program_url: https://sykehuspartner.no/sider/Responsible-disclosure-policy.aspx
   rewards: []
   security_txt: https://www.sykehuspartner.no/.well-known/security.txt
-  comment: Felles helse-IT-drift for Helse Sør-Øst. / Shared health-IT operations for Helse Sør-Øst.
+  status: unknown
+  comment: Felles helse-IT-drift for Helse Sør-Øst. Policysiden er borte, security.txt virker fortsatt. / Shared health-IT operations for Helse Sør-Øst. The policy page is gone, security.txt still works.
 
 - name: Tryg Forsikring
   url: https://www.tryg.no

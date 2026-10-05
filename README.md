@@ -13,7 +13,7 @@ Know of a program that's missing? See [Contributing](#bidra--contributing) below
 > ⚠️ **A `security.txt` is not an invitation to test.** It is a contact channel for reporting vulnerabilities you found through normal use, not permission to scan, attack, or actively probe for weaknesses. Most `security.txt` entries below (the "security.txt / contact only" category) have **no** formal policy, scope, or safe harbor language. Without a published bug bounty or VDP agreement that explicitly authorizes active testing, unauthorized testing can be illegal and you may face liability even if you report the finding in good faith.
 
 <!-- programs:start -->
-**81 aktive program / active programs · 9 offentlige bug bounty-program med pengedusør / public bug bounty programs with a cash reward · sist oppdatert / last updated 2026-09-22**
+**81 aktive program / active programs · 9 offentlige bug bounty-program med pengedusør / public bug bounty programs with a cash reward · sist oppdatert / last updated 2026-10-05**
 
 ### 💰 Offentlige bug bounty-program / Public bug bounty programs
 
@@ -60,11 +60,11 @@ Private program krever invitasjon fra plattformen eller selskapet, men det er of
 |[Danske Bank](https://danskebank.com)|[Eget program / Self-hosted](https://danskebank.com/responsible-disclosure)|-|-|Nordisk konsern, dekker Danske Bank Norge. / Nordic group, covers Danske Bank Norge.|?|-|
 |[Digdir](https://www.digdir.no)|[Eget program / Self-hosted](https://www.digdir.no/digdir/responsible-disclosure-policy/6386)|<span title="Hall of Fame">🏆</span>|-|-|?|-|
 |[Equinor](https://www.equinor.com)|[Eget program / Self-hosted](https://www.equinor.com/about-us/csirt)|-|[security.txt](https://www.equinor.com/.well-known/security.txt)|-|?|-|
-|[Euronext Securities Oslo](https://www.euronextvps.no)|[Eget program / Self-hosted](https://www.euronext.com/en/post-trade/euronext-securities/oslo/about-us/vulnerability-reporting)|-|-|Tidligere Verdipapirsentralen, forkortet VPS. / Formerly Verdipapirsentralen, abbreviated VPS.|?|-|
+|[Euronext Securities Oslo](https://www.euronext.com)|[Eget program / Self-hosted](https://www.euronext.com/en/post-trade/euronext-securities/oslo/about-us/vulnerability-reporting)|-|-|Tidligere Verdipapirsentralen, forkortet VPS. / Formerly Verdipapirsentralen, abbreviated VPS.|?|-|
 |[Gjensidige](https://www.gjensidige.no)|[HackerOne](https://hackerone.com/gjensidige)|<span title="Hall of Fame">🏆</span>|-|-|?|-|
 |[Handelsbanken](https://www.handelsbanken.no)|[HackerOne](https://hackerone.com/handelsbanken)|-|-|Nordisk konsern, dekker Handelsbanken Norge. / Nordic group, covers Handelsbanken Norge.|?|-|
 |[Horde](https://horde.no)|[Eget program / Self-hosted](https://horde.no/responsible-disclosure/)|<span title="Hall of Fame">🏆</span>|[security.txt](https://horde.no/.well-known/security.txt)|-|?|-|
-|[Infront](https://oslomarketsolutions.no) - Oslo Market Solutions|[Eget program / Self-hosted](https://oslomarketsolutions.no/en/responsibledisclosure/)|-|-|-|?|-|
+|[Infront](https://oslomarketsolutions.no) - Oslo Market Solutions <span title="Usikker status / Unknown status">⚠️</span>|[Eget program / Self-hosted](https://oslomarketsolutions.no/en/responsibledisclosure/)|-|-|Nettstedet har utløpt TLS-sertifikat per oktober 2026. / The site has an expired TLS certificate as of October 2026.|?|-|
 |[Jobreg](https://jobreg.no)|[Eget program / Self-hosted](https://www.jobreg.no/security.php)|<span title="Hall of Fame">🏆</span>|-|-|?|-|
 |[JustisCERT](https://www.justiscert.no)|[Eget program / Self-hosted](https://www.justiscert.no/rapportering-av-sarbarheter)|-|-|CERT for justissektoren, bl.a. politiet og domstolene. / CERT for the justice sector, incl. police and courts.|?|-|
 |[Kahoot](https://kahoot.com)|[Eget program / Self-hosted](https://kahoot.com/disclosure-policy.txt)|-|[security.txt](https://kahoot.com/.well-known/security.txt)|-|?|-|
@@ -82,7 +82,7 @@ Private program krever invitasjon fra plattformen eller selskapet, men det er of
 |[SAS](https://www.flysas.com)|[HackerOne](https://hackerone.com/sas_legacy)|<span title="Hall of Fame">🏆</span>|-|Scandinavian Airlines, skandinavisk flyselskap med stor virksomhet i Norge. / Scandinavian Airlines, a Scandinavian airline with major operations in Norway.|?|-|
 |[Signicat](https://www.signicat.com)|[Intigriti](https://app.intigriti.com/programs/signicat/signicatresponsibledisclosure/detail)|<span title="Hall of Fame">🏆</span>|[security.txt](https://www.signicat.com/.well-known/security.txt)|-|?|-|
 |[Storebrand](https://www.storebrand.no)|[Intigriti](https://app.intigriti.com/programs/spp-storebrand/storebrand-rd/detail)|-|[security.txt](https://www.storebrand.no/.well-known/security.txt)|-|Jan. 2026|-|
-|[Sykehuspartner](https://www.sykehuspartner.no)|[Eget program / Self-hosted](https://sykehuspartner.no/sider/Responsible-disclosure-policy.aspx)|-|[security.txt](https://www.sykehuspartner.no/.well-known/security.txt)|Felles helse-IT-drift for Helse Sør-Øst. / Shared health-IT operations for Helse Sør-Øst.|?|-|
+|[Sykehuspartner](https://www.sykehuspartner.no) <span title="Usikker status / Unknown status">⚠️</span>|Eget program / Self-hosted|-|[security.txt](https://www.sykehuspartner.no/.well-known/security.txt)|Felles helse-IT-drift for Helse Sør-Øst. Policysiden er borte, security.txt virker fortsatt. / Shared health-IT operations for Helse Sør-Øst. The policy page is gone, security.txt still works.|?|-|
 |[Telenor](https://www.telenor.com)|[HackerOne](https://hackerone.com/telenor_group)|<span title="Hall of Fame">🏆</span>|-|-|?|-|
 |[Telia](https://www.telia.no)|[HackerOne](https://hackerone.com/teliasoneraab)|-|-|Nordisk konsern, ikke bekreftet Norge-spesifikk scope. / Nordic group, no Norway-specific scope confirmed.|?|-|
 |[Tryg Forsikring](https://www.tryg.no)|[Eget program / Self-hosted](https://tryg.com/en/responsible-disclosure)|-|[security.txt](https://tryg.dk/.well-known/security.txt)|Nordisk konsern, dekker Tryg Norge. / Nordic group, covers Tryg Norge.|?|-|
@@ -91,7 +91,7 @@ Private program krever invitasjon fra plattformen eller selskapet, men det er of
 |[Vipps](https://vipps.no)|[Eget program / Self-hosted](https://vipps.no/sikkerhet/responsible-disclosure-policy/)|<span title="Hall of Fame">🏆</span>|[security.txt](https://vipps.no/.well-known/security.txt)|-|?|-|
 |[Visma](https://visma.no)|[Intigriti](https://app.intigriti.com/researcher/programs/visma/VismaResponsibleDisclosure)|<span title="Swag">👕</span> <span title="Hall of Fame">🏆</span>|-|-|?|[Visma](https://www.visma.com/trust-centre/responsible-disclosure)|
 |[Vy](https://www.vy.no)|[Eget program / Self-hosted](https://www.vy.no/en/conditions-and-privacy/vulnerability-disclosure-policy)|-|-|Tidligere NSB. / Formerly NSB.|?|-|
-|[Yara](https://www.yara.com)|[Eget program / Self-hosted](https://vdp.yara.com/)|<span title="Hall of Fame">🏆</span>|-|-|?|-|
+|[Yara](https://www.yara.com) <span title="Usikker status / Unknown status">⚠️</span>|[Eget program / Self-hosted](https://vdp.yara.com/)|<span title="Hall of Fame">🏆</span>|-|VDP-siden svarer med feil TLS-sertifikat per oktober 2026. / The VDP site serves a mismatched TLS certificate as of October 2026.|?|-|
 
 ### 📇 Kun security.txt / kontakt, uten egen policyside / security.txt or contact only, no dedicated policy page
 
