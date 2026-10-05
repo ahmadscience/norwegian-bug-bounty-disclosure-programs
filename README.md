@@ -183,4 +183,6 @@ Know a Norwegian organization that should have a program but doesn't? Don't add 
 
 ---
 
-*Data: [`programs.yaml`](programs.yaml) · Bidragsguide / Contributing: [CONTRIBUTING.md](CONTRIBUTING.md) · Lisens / License: [CC0 1.0](LICENSE)*
+*Data: [`programs.yaml`](programs.yaml) · Bidragsguide / Contributing: [CONTRIBUTING.md](CONTRIBUTING.md) · Lisens / License: [CC BY 4.0](LICENSE)*
+
+*© ahmadscience og bidragsytere / and contributors. Gjenbruk er tillatt, men du må kreditere kilden med navn og lenke til dette repoet. / Reuse is allowed, but you must credit the source by name with a link to this repository.*
