@@ -25,7 +25,7 @@ def parse(body):
         fields.setdefault(key, []).append(value.strip())
     expires_at = None
     if fields.get("expires"):
-        value = fields["expires"][0].replace("Z", "+00:00")
+        value = fields["expires"][0].upper().replace("Z", "+00:00")  # RFC 3339 allows a lowercase z
         try:
             expires_at = dt.datetime.fromisoformat(value)
             if expires_at.tzinfo is None:
