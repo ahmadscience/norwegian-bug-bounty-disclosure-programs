@@ -13,7 +13,7 @@ Know of a program that's missing? See [Contributing](#bidra--contributing) below
 > ⚠️ **A `security.txt` is not an invitation to test.** It is a contact channel for reporting vulnerabilities you found through normal use, not permission to scan, attack, or actively probe for weaknesses. Most `security.txt` entries below (the "security.txt / contact only" category) have **no** formal policy, scope, or safe harbor language. Without a published bug bounty or VDP agreement that explicitly authorizes active testing, unauthorized testing can be illegal and you may face liability even if you report the finding in good faith.
 
 <!-- programs:start -->
-**82 aktive program / active programs (+ 3 uten navn / unnamed) · 9 offentlige bug bounty-program med pengedusør / public bug bounty programs with a cash reward · sist oppdatert / last updated 2026-10-05**
+**88 aktive program / active programs (+ 3 uten navn / unnamed) · 9 offentlige bug bounty-program med pengedusør / public bug bounty programs with a cash reward · sist oppdatert / last updated 2026-10-05**
 
 ### 💰 Offentlige bug bounty-program / Public bug bounty programs
 
@@ -55,6 +55,7 @@ Private program krever invitasjon fra plattformen eller selskapet, men det er of
 
 |Firma / Company|Plattform / program / Platform / program|Dusør / Reward|security.txt|Kommentar / Comment|Lansert / Launched|Kilde / Source|
 |---|---|---|---|---|---|---|
+|[Adnuntius](https://adnuntius.com)|[Eget program / Self-hosted](https://adnuntius.com/responsible-disclosure)|-|-|-|?|-|
 |[AutoStore](https://www.autostoresystem.com)|[Eget program / Self-hosted](https://www.autostoresystem.com/legal/vulnerability-disclosure-policy-responsible-research-guidelines)|<span title="Hall of Fame">🏆</span>|-|Ingen dusør. Produktene styrer fysiske roboter, test forsiktig. / No bounty. Products control physical robots, test with care.|?|-|
 |[Bergen kommune](https://www.bergen.kommune.no)|Eget program / Self-hosted|-|[security.txt](https://www.bergen.kommune.no/.well-known/security.txt)|Kontakt: itsikkerhet@bergen.kommune.no. Ber om varsel før aktiv testing. / Contact: itsikkerhet@bergen.kommune.no. Asks for advance notice before active testing.|?|-|
 |[Cognite](https://www.cognite.com)|[Eget program / Self-hosted](https://docs.cognite.com/cdf/trust/vulnerability-disclosure-policy)|-|[security.txt](https://www.cognite.com/.well-known/security.txt)|-|?|-|
@@ -68,6 +69,7 @@ Private program krever invitasjon fra plattformen eller selskapet, men det er of
 |[Horde](https://horde.no)|[Eget program / Self-hosted](https://horde.no/responsible-disclosure/)|<span title="Hall of Fame">🏆</span>|[security.txt](https://horde.no/.well-known/security.txt)|-|?|-|
 |[Infront](https://oslomarketsolutions.no) - Oslo Market Solutions <span title="Usikker status / Unknown status">⚠️</span>|[Eget program / Self-hosted](https://oslomarketsolutions.no/en/responsibledisclosure/)|-|-|Nettstedet har utløpt TLS-sertifikat per oktober 2026. / The site has an expired TLS certificate as of October 2026.|?|-|
 |[Jobreg](https://jobreg.no)|[Eget program / Self-hosted](https://www.jobreg.no/security.php)|<span title="Hall of Fame">🏆</span>|-|-|?|-|
+|[Jotron](https://www.jotron.com)|[Eget program / Self-hosted](https://www.jotron.com/about-us/security-and-safety/responsible-disclosure-policy)|-|-|-|?|-|
 |[JustisCERT](https://www.justiscert.no)|[Eget program / Self-hosted](https://www.justiscert.no/rapportering-av-sarbarheter)|-|[security.txt](https://www.justiscert.no/.well-known/security.txt)|CERT for justissektoren, bl.a. politiet og domstolene. / CERT for the justice sector, incl. police and courts.|?|-|
 |[Kahoot](https://kahoot.com)|[Eget program / Self-hosted](https://kahoot.com/disclosure-policy.txt)|-|[security.txt](https://kahoot.com/.well-known/security.txt)|-|?|-|
 |[Kartverket](https://www.kartverket.no)|[Eget program / Self-hosted](https://vdp.kartverket.no/responsible-disclosure-policy.txt)|<span title="Hall of Fame">🏆</span>|-|Dekker alle underdomener av kartverket.no og geonorge.no. / Covers all subdomains of kartverket.no and geonorge.no.|?|-|
@@ -81,6 +83,7 @@ Private program krever invitasjon fra plattformen eller selskapet, men det er of
 |[Norsk Helsenett](https://www.nhn.no) - [Helsenorge](https://www.helsenorge.no)|[Eget program / Self-hosted](https://www.nhn.no/.well-known/vulnerability-disclosure.html)|<span title="Hall of Fame">🏆</span>|[security.txt](https://www.nhn.no/.well-known/security.txt)|-|?|-|
 |[Norsk Hydro](https://www.hydro.com)|[HackerOne](https://hackerone.com/norskhydroasa)|<span title="Hall of Fame">🏆</span>|-|-|?|-|
 |[NRK](https://nrk.no)|[Eget program / Self-hosted](https://info.nrk.no/responsible-disclosure-policy/)|<span title="Hall of Fame">🏆</span>|[security.txt](https://nrk.no/.well-known/security.txt)|-|?|-|
+|[Oslo kommune](https://www.oslo.kommune.no)|[Eget program / Self-hosted](https://www.oslo.kommune.no/security/policy)|-|[security.txt](https://www.oslo.kommune.no/.well-known/security.txt)|-|?|-|
 |[PostNord](https://www.postnord.com) - [Bring](https://www.bring.no)|[Eget program / Self-hosted](https://vdp.postnord.com/)|<span title="Hall of Fame">🏆</span>|[security.txt](https://www.postnord.com/.well-known/security.txt)|-|?|-|
 |[reMarkable](https://remarkable.com)|[Eget program / Self-hosted](https://support.remarkable.com/hc/en-us/articles/5068888862621-Vulnerability-Disclosure-Policy)|<span title="Hall of Fame">🏆</span>|[security.txt](https://remarkable.com/.well-known/security.txt)|Oslo-basert nettbrettprodusent. / Oslo-based tablet maker.|?|-|
 |[SAS](https://www.flysas.com)|[HackerOne](https://hackerone.com/sas_legacy)|<span title="Hall of Fame">🏆</span>|-|Scandinavian Airlines, skandinavisk flyselskap med stor virksomhet i Norge. / Scandinavian Airlines, a Scandinavian airline with major operations in Norway.|?|-|
@@ -92,9 +95,12 @@ Private program krever invitasjon fra plattformen eller selskapet, men det er of
 |[Tryg Forsikring](https://www.tryg.no)|[Eget program / Self-hosted](https://tryg.com/en/responsible-disclosure)|-|[security.txt](https://tryg.dk/.well-known/security.txt)|Nordisk konsern, dekker Tryg Norge. / Nordic group, covers Tryg Norge.|?|-|
 |[TV 2](https://www.tv2.no)|[Eget program / Self-hosted](https://info.tv2.no/info/artikkel/responsible-disclosure-policy)|<span title="Hall of Fame">🏆</span>|[security.txt](https://www.tv2.no/.well-known/security.txt)|-|?|-|
 |[Universitetet i Oslo](https://www.uio.no)|[Eget program / Self-hosted](https://www.uio.no/english/services/it/security/cert/vulnerability-disclosure-policy.html)|-|[security.txt](https://www.uio.no/.well-known/security.txt)|Drives av UiO-CERT. / Run by UiO-CERT.|?|-|
+|[Vestland fylkeskommune](https://www.vestlandfylke.no)|[Eget program / Self-hosted](https://www.vestlandfylke.no/security-policy)|-|[security.txt](https://vestlandfylke.no/.well-known/security.txt)|-|?|-|
 |[Vipps](https://vipps.no)|[Eget program / Self-hosted](https://vipps.no/sikkerhet/responsible-disclosure-policy/)|<span title="Hall of Fame">🏆</span>|[security.txt](https://vipps.no/.well-known/security.txt)|-|?|-|
 |[Visma](https://visma.no)|[Intigriti](https://app.intigriti.com/researcher/programs/visma/VismaResponsibleDisclosure)|<span title="Swag">👕</span> <span title="Hall of Fame">🏆</span>|-|-|?|[Visma](https://www.visma.com/trust-centre/responsible-disclosure)|
+|[Voss herad](https://voss.herad.no)|[Eget program / Self-hosted](https://voss.herad.no/security/policy)|-|-|-|?|-|
 |[Vy](https://www.vy.no)|[Eget program / Self-hosted](https://www.vy.no/en/conditions-and-privacy/vulnerability-disclosure-policy)|-|[security.txt](https://www.vy.no/.well-known/security.txt)|Tidligere NSB. / Formerly NSB.|?|-|
+|[Whereby](https://whereby.com)|[Eget program / Self-hosted](https://whereby.com/information/vdp/)|<span title="Hall of Fame">🏆</span>|-|-|?|-|
 |[Yara](https://www.yara.com) <span title="Usikker status / Unknown status">⚠️</span>|[Eget program / Self-hosted](https://vdp.yara.com/)|<span title="Hall of Fame">🏆</span>|-|VDP-siden svarer med feil TLS-sertifikat per oktober 2026. / The VDP site serves a mismatched TLS certificate as of October 2026.|?|-|
 
 ### 📇 Kun security.txt / kontakt, uten egen policyside / security.txt or contact only, no dedicated policy page
@@ -112,7 +118,6 @@ Ingen bug bounty eller formell policyside, men det finnes en kjent kanal for å 
 |[Kongsberg Gruppen](https://www.kongsberg.com)|Eget program / Self-hosted|-|[security.txt](https://www.kongsberg.com/.well-known/security.txt)|-|?|
 |[NAV](https://www.nav.no)|Eget program / Self-hosted|-|[security.txt](https://nav.no/.well-known/security.txt)|Kontakt: soc@nav.no. / Contact: soc@nav.no.|?|
 |[Norkart](https://www.norkart.no)|Eget program / Self-hosted|-|[security.txt](https://norkart.no/.well-known/security.txt)|-|?|
-|[Oslo kommune](https://www.oslo.kommune.no)|Eget program / Self-hosted|-|[security.txt](https://www.oslo.kommune.no/.well-known/security.txt)|-|?|
 |[Ringerike kommune](https://www.ringerike.kommune.no)|Eget program / Self-hosted|-|[security.txt](https://www.ringerike.kommune.no/.well-known/security.txt)|-|?|
 |[Sbanken](https://www.sbanken.no)|Eget program / Self-hosted|-|[security.txt](https://sbanken.no/.well-known/security.txt)|Del av DNB, kontakt irt@dnb.no. / Part of DNB, contact irt@dnb.no.|?|
 |[Skatteetaten](https://www.skatteetaten.no)|Eget program / Self-hosted|-|[security.txt](https://www.skatteetaten.no/.well-known/security.txt)|Kontakt: csirt@skatteetaten.no. / Contact: csirt@skatteetaten.no.|?|
@@ -121,6 +126,7 @@ Ingen bug bounty eller formell policyside, men det finnes en kjent kanal for å 
 |[Statkraft](https://www.statkraft.com)|[Eget program / Self-hosted](https://www.statkraft.com/about-statkraft/irt/)|-|[security.txt](https://www.statkraft.com/.well-known/security.txt)|IRT-kontakt: csirt@statkraft.com, ingen egen policyside. / IRT contact: csirt@statkraft.com, no dedicated policy page.|?|
 |[Søndre Land kommune](https://www.sondre-land.kommune.no)|Eget program / Self-hosted|-|[security.txt](https://www.sondre-land.kommune.no/.well-known/security.txt)|-|?|
 |[Telenor](https://www.telenor.no) - Telenor Norge|Eget program / Self-hosted|-|[security.txt](https://www.telenor.no/.well-known/security.txt)|-|?|
+|[Trøndelag fylkeskommune](https://www.trondelagfylke.no)|Eget program / Self-hosted|-|[security.txt](https://trondelagfylke.no/.well-known/security.txt)|-|?|
 |[Valgdirektoratet](https://www.valg.no)|Eget program / Self-hosted|-|[security.txt](https://www.valg.no/.well-known/security.txt)|Kontakt: sikkerhet@valg.no. / Contact: sikkerhet@valg.no.|?|
 
 Dusør / Reward: 💰 penger / money · 🏆 hall of fame · 👕 swag. ⚠️ = usikker status / unknown status · 🔴 = stengt / closed.
@@ -159,6 +165,7 @@ Programs that publicly credit researchers (🏆 in the tables), useful if you wa
 - [TV 2](https://info.tv2.no/info/artikkel/responsible-disclosure-policy)
 - [Vipps](https://vipps.no/sikkerhet/responsible-disclosure-policy/)
 - [Visma](https://app.intigriti.com/researcher/programs/visma/VismaResponsibleDisclosure)
+- [Whereby](https://whereby.com/information/vdp/)
 - [Yara](https://vdp.yara.com/)
 <!-- halloffame:end -->
 

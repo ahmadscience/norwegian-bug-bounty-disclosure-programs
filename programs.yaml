@@ -636,7 +636,8 @@
   url: https://www.oslo.kommune.no
   platform: none
   visibility: public
-  type: contact-only
+  type: rdp
+  program_url: https://www.oslo.kommune.no/security/policy
   rewards: []
   security_txt: https://www.oslo.kommune.no/.well-known/security.txt
 
@@ -832,3 +833,52 @@
   source: https://www.nordicsemi.com/Products/Technologies/Security/Vulnerability-Disclosure
   source_name: Nordic Semiconductor
   comment: Startet på HackerOne i 2021, nå på YesWeHack. Kontakt YesWeHack for invitasjon. / Started on HackerOne in 2021, now on YesWeHack. Contact YesWeHack for an invite.
+
+- name: Adnuntius
+  url: https://adnuntius.com
+  platform: none
+  visibility: public
+  type: rdp
+  program_url: https://adnuntius.com/responsible-disclosure
+  rewards: []
+
+- name: Jotron
+  url: https://www.jotron.com
+  platform: none
+  visibility: public
+  type: rdp
+  program_url: https://www.jotron.com/about-us/security-and-safety/responsible-disclosure-policy
+  rewards: []
+
+- name: Trøndelag fylkeskommune
+  url: https://www.trondelagfylke.no
+  platform: none
+  visibility: public
+  type: contact-only
+  rewards: []
+  security_txt: https://trondelagfylke.no/.well-known/security.txt
+
+- name: Vestland fylkeskommune
+  url: https://www.vestlandfylke.no
+  platform: none
+  visibility: public
+  type: rdp
+  program_url: https://www.vestlandfylke.no/security-policy
+  rewards: []
+  security_txt: https://vestlandfylke.no/.well-known/security.txt
+
+- name: Voss herad
+  url: https://voss.herad.no
+  platform: none
+  visibility: public
+  type: rdp
+  program_url: https://voss.herad.no/security/policy
+  rewards: []
+
+- name: Whereby
+  url: https://whereby.com
+  platform: none
+  visibility: public
+  type: vdp
+  program_url: https://whereby.com/information/vdp/
+  rewards: [hall-of-fame]

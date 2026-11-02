@@ -65,6 +65,10 @@ Run `python3 scripts/render.py --check` to see whether `README.md` is in sync wi
 
 `python3 scripts/check_links.py` checks that every link in `programs.yaml` works. It also runs automatically every week.
 
+`python3 scripts/discover.py` leter etter norske virksomheter som ikke står i listen ennå: den henter de største selskapene og hele offentlig sektor fra Enhetsregisteret, sjekker nettsidene deres for `security.txt`, og sammenligner med disclose.io sin liste. Resultatet er kandidater som må sjekkes manuelt, ikke ferdige oppføringer. Den kjører automatisk hver måned, og rapporten ligger som artefakt på kjøringen under Actions.
+
+`python3 scripts/discover.py` looks for Norwegian organisations not yet in the list: it pulls the largest companies and the whole public sector from Enhetsregisteret, checks their websites for a `security.txt`, and compares against disclose.io's list. The output is leads to verify by hand, not finished entries. It runs automatically every month, and the report is attached as an artifact to the run under Actions.
+
 ## Lisens / License
 
 Ved å bidra godtar du at bidraget ditt publiseres under [CC BY 4.0](LICENSE). Alle som gjenbruker listen må kreditere kilden.
