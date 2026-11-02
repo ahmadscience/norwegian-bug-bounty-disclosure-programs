@@ -5,6 +5,9 @@ A link counts as dead on 404/410, or when the host doesn't resolve or refuses
 the connection. 401/403/429/5xx are reported as "blocked" only, since many
 sites reject automated requests from CI runners.
 
+Listed security.txt files are also parsed (RFC 9116) and reported if they lack a
+Contact or their Expires date has passed. That is reported, never fatal.
+
 Usage: check_links.py [--strict] [--discover]
   --strict    exit non-zero on dead links
   --discover  also look for /.well-known/security.txt on entries without one
@@ -22,9 +25,10 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+import securitytxt  # noqa: E402
 from render import URL_FIELDS  # noqa: E402
 
-UA = "Mozilla/5.0 (compatible; norwegian-disclosure-programs link check; +https://github.com/ahmadscience/norwegian-bug-bounty-disclosure-programs)"
+UA = securitytxt.UA
 DEAD_CODES = {404, 410}
 
 
@@ -48,18 +52,26 @@ def check(url):
 
 def find_security_txt(url):
     """Return the security.txt URL for a site if it serves a valid-looking one."""
-    base = "/".join(url.split("/")[:3])
-    candidate = f"{base}/.well-known/security.txt"
-    req = urllib.request.Request(candidate, headers={"User-Agent": UA})
-    try:
-        with urllib.request.urlopen(req, timeout=20) as resp:
-            body = resp.read(65536).decode("utf-8", "replace")
-            final = resp.geturl()
-    except (urllib.error.URLError, socket.timeout, ConnectionError, OSError, ValueError):
-        return None
-    if "contact:" not in body.lower() or "<html" in body.lower():
-        return None
-    return final if final.startswith("https://") else candidate
+    hit = securitytxt.fetch("/".join(url.split("/")[:3]) + "/.well-known/security.txt", timeout=20)
+    return hit[0] if hit and hit[0].startswith("https://") else None
+
+
+def security_txt_problems(programs):
+    """Parse every listed security.txt and report RFC 9116 problems (expired, no Contact)."""
+    urls = sorted({p["security_txt"] for p in programs if "security_txt" in p})
+    with ThreadPoolExecutor(max_workers=16) as pool:
+        bodies = dict(zip(urls, pool.map(lambda u: securitytxt.fetch(u, timeout=20), urls)))
+    lines = []
+    for url in urls:
+        hit = bodies[url]
+        issues = securitytxt.problems(securitytxt.parse(hit[1])) if hit else ["not a security.txt (or unreachable)"]
+        if issues:
+            lines.append(f"- {url}: {', '.join(issues)}")
+    out = f"\nsecurity.txt problems in {len(lines)} of {len(urls)} listed files:\n" + "\n".join(lines)
+    print(out)
+    if os.environ.get("GITHUB_STEP_SUMMARY"):
+        with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:
+            f.write(out + "\n")
 
 
 def discover(programs):
@@ -100,6 +112,7 @@ def main():
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:
             f.write(summary + "\n")
+    security_txt_problems(programs)
     if "--discover" in sys.argv:
         discover(programs)
     # Entries already marked unknown/closed are listed but don't fail the run.

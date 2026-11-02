@@ -422,6 +422,7 @@
   type: vdp
   program_url: https://hackerone.com/sas_legacy
   rewards: [hall-of-fame]
+  security_txt: https://www.flysas.com/.well-known/security.txt
   comment: Scandinavian Airlines, skandinavisk flyselskap med stor virksomhet i Norge. / Scandinavian Airlines, a Scandinavian airline with major operations in Norway.
 
 - name: Telenor
@@ -592,6 +593,8 @@
   type: contact-only
   rewards: []
   security_txt: https://holtalen.kommune.no/.well-known/security.txt
+  status: unknown
+  comment: security.txt svarer 404 per november 2026. / security.txt returns 404 as of November 2026.
 
 - name: JustisCERT
   url: https://www.justiscert.no
@@ -636,7 +639,8 @@
   url: https://www.oslo.kommune.no
   platform: none
   visibility: public
-  type: contact-only
+  type: rdp
+  program_url: https://www.oslo.kommune.no/security-policy/
   rewards: []
   security_txt: https://www.oslo.kommune.no/.well-known/security.txt
 
@@ -812,6 +816,7 @@
   type: rdp
   program_url: https://vdp.kartverket.no/responsible-disclosure-policy.txt
   rewards: [hall-of-fame]
+  security_txt: https://www.kartverket.no/.well-known/security.txt
   comment: Dekker alle underdomener av kartverket.no og geonorge.no. / Covers all subdomains of kartverket.no and geonorge.no.
 
 - name: Nordic Semiconductor
@@ -832,3 +837,54 @@
   source: https://www.nordicsemi.com/Products/Technologies/Security/Vulnerability-Disclosure
   source_name: Nordic Semiconductor
   comment: Startet på HackerOne i 2021, nå på YesWeHack. Kontakt YesWeHack for invitasjon. / Started on HackerOne in 2021, now on YesWeHack. Contact YesWeHack for an invite.
+
+- name: Adnuntius
+  url: https://adnuntius.com
+  platform: none
+  visibility: public
+  type: rdp
+  program_url: https://adnuntius.com/responsible-disclosure
+  rewards: []
+
+- name: Jotron
+  url: https://www.jotron.com
+  platform: none
+  visibility: public
+  type: rdp
+  program_url: https://www.jotron.com/about-us/security-and-safety/responsible-disclosure-policy
+  rewards: []
+  security_txt: https://www.jotron.com/.well-known/security.txt
+
+- name: Trøndelag fylkeskommune
+  url: https://www.trondelagfylke.no
+  platform: none
+  visibility: public
+  type: contact-only
+  rewards: []
+  security_txt: https://trondelagfylke.no/.well-known/security.txt
+
+- name: Vestland fylkeskommune
+  url: https://www.vestlandfylke.no
+  platform: none
+  visibility: public
+  type: rdp
+  program_url: https://www.vestlandfylke.no/security-policy
+  rewards: []
+  security_txt: https://vestlandfylke.no/.well-known/security.txt
+
+- name: Voss herad
+  url: https://voss.herad.no
+  platform: none
+  visibility: public
+  type: rdp
+  program_url: https://voss.herad.no/security/policy
+  rewards: []
+  security_txt: https://voss.herad.no/.well-known/security.txt
+
+- name: Whereby
+  url: https://whereby.com
+  platform: none
+  visibility: public
+  type: vdp
+  program_url: https://whereby.com/information/vdp/
+  rewards: [hall-of-fame]

@@ -1,0 +1,35 @@
+name: Discover new programs
+
+on:
+  schedule:
+    - cron: "41 5 3 * *"  # monthly
+  workflow_dispatch:
+    inputs:
+      min_employees:
+        description: Sweep companies with at least this many employees
+        default: "200"
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - run: pip install pyyaml
+      - run: python3 scripts/discover.py --min-employees "${MIN_EMPLOYEES:-200}"
+        env:
+          MIN_EMPLOYEES: ${{ inputs.min_employees }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: discovery
+          path: |
+            discovery.md
+            discovery.csv
+          if-no-files-found: ignore

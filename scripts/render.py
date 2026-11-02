@@ -117,6 +117,14 @@ def validate(programs):
         if key in seen:
             fail(i, f"duplicate of entry {seen[key] + 1}")
         seen[key] = i
+    # Two entries pointing at the same program page are almost always a duplicate.
+    pages = {}
+    for i, p in enumerate(programs):
+        if "program_url" in p:
+            page = re.sub(r"^https://(www\.)?", "", p["program_url"].lower()).rstrip("/")
+            if page in pages:
+                fail(i, f"same program_url as entry {pages[page] + 1}")
+            pages[page] = i
 
 
 def link(text, url):
